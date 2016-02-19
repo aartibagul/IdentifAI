@@ -45,6 +45,12 @@ shift $((OPTIND-1))
 
 if [ $tag -eq 1 ]
 then
+    if [ -z "$directory_path" ]
+    then
+       echo "Please specify directory path"
+       show_help
+       exit 1
+    fi 
     python tag.py $directory_path
 else
     python search.py $directory_path
