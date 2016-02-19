@@ -29,7 +29,7 @@ while getopts "h?:c:d:" opt; do
     c)  command_name=$OPTARG
         if [ "$OPTARG" == "tag" ] 
         then
-            tag= 1
+            tag=1
 
         elif [ "$OPTARG" == "search" ]
         then
@@ -54,6 +54,6 @@ then
     python tag.py $directory_path
 else
     python search.py $directory_path
-
+fi
 echo "output_file='$directory_path', command = '$command_name', Leftovers: $@"
 
