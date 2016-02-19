@@ -3,7 +3,7 @@ import sys
 import os
 import shelve
 
-shelf = shelve.open('tag_shelf.db')
+shelf = shelve.open('tag_shelf')
 
 directory_path = str(sys.argv[1]) #get the directory path
 clarifai_api = ClarifaiApi() # assumes environment variables are set.
@@ -17,14 +17,16 @@ for f in os.listdir(directory_path):
 
         for t in tag_list:
             if shelf.has_key(t):
-                temp = shelf[t]
-                temp.append(image_path)
-                shelf[t] = temp
+                if image_path not in shelf[t]:
+                    temp = shelf[t]
+                    temp.append(image_path)
+                    shelf[t] = temp
             else:
                 shelf[t] = [image_path]
 
-
+print(shelf)
 shelf.close()
+
 
 
 

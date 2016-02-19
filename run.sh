@@ -10,14 +10,8 @@ if [ $# -lt 1 ]; then
    exit 1
 fi
 
-#name=1
-
-
-#echo $name
-
 OPTIND=1         # Reset in case getopts has been used previously in the shell.
 
-# Initialize our own variables:
 directory_path=""
 
 while getopts "h?:c:d:" opt; do
@@ -55,5 +49,4 @@ then
 else
     python search.py $directory_path
 fi
-echo "output_file='$directory_path', command = '$command_name', Leftovers: $@"
 
