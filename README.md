@@ -4,7 +4,7 @@ Search for images  in your file system by assigning tags
 IdentifAI uses the ClarifAI API to tag pictures in a directory (specified by the user) and saves the mapping between the tags and the paths of the images in a python shelve. This allows the user to then search for images with a specific tag.
 
 ##Usage##
-``./run.sh -c tag -d /path/to/directory ```tags all the images in the directory and saves the tags. 
+```./run.sh -c tag -d /path/to/directory ```tags all the images in the directory and saves the tags. 
  ```./run.sh -c search ```allows the user to search for images that have been tagged.
 
 NOTE: You must first follow the installation steps listed on the [Clarifai Python API client] (https://github.com/Clarifai/clarifai-python)
