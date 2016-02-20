@@ -22,3 +22,7 @@ export CLARIFAI_APP_SECRET=<an_application_secret_from_your_account>
 - Let users have the option to get similar images from the web
 - Embed the tags in the image metadata and make the tags searchable through Finder in Mac OS X
 - Improve the user experience (example - show previews of images instead of image paths)
+ 
+
+##Special Thanks##
+To Giorgio who came up with the idea, and the name, with his brilliant creativity.
