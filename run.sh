@@ -53,6 +53,6 @@ then
     fi 
     python tag.py $directory_path
 else
-    python search.py $directory_path
+    python search.py 
 fi
 

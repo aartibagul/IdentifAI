@@ -24,7 +24,6 @@ for f in os.listdir(directory_path):
             else:
                 shelf[t] = [image_path]
 
-print(shelf)
 shelf.close()
 
 
